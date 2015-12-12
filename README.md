@@ -1,4 +1,4 @@
-![Sin titulo](https://pbs.twimg.com/profile_images/3786155988/46ea2dd8b1bdd31a8ba61044cb5b6ebe_400x400.png)
+![Sin titulo](http://blog.noders.com/content/images/2015/04/noders3-rectangle-1000-2.png)
 
 # NodersCO-Web
 

@@ -27,6 +27,11 @@ h4 {
 	font-family: Montserrat, sans-serif;
 }
 
+.jumbotron.text-center {
+    color: #FFF;
+    text-shadow: 0px 2px 3px #000000;
+}
+
 .container-fluid {
 	padding: 60px 50px;
 }
@@ -36,12 +41,12 @@ h4 {
 }
 
 .logo-small {
-	color: #f4511e;
+	color: #333;
 	font-size: 50px;
 }
 
 .logo {
-	color: #f4511e;
+	color: #333;
 	font-size: 200px;
 }
 
@@ -52,15 +57,15 @@ h4 {
 }
 
 .thumbnail img {
-	width: 100%;
-	height: 100%;
+	width: 20%;
+	height: 10%;
 	margin-bottom: 10px;
 }
 
 .carousel-control.right,
 .carousel-control.left {
 	background-image: none;
-	color: #333;
+	color: #eee;
 }
 
 .carousel-indicators li {
@@ -139,6 +144,7 @@ h4 {
 	letter-spacing: 4px;
 	border-radius: 0;
 	font-family: Montserrat, sans-serif;
+	text-shadow: 0px 2px 3px #0C0C0C;
 }
 
 .navbar li a,
@@ -220,6 +226,7 @@ footer .glyphicon {
     background-position: center;
 	width: 60% !important;
     height: auto !important;
+	text-shadow: 0px 2px 3px #0C0C0C;
 }
 
 .img-noders-carousel {
@@ -233,4 +240,9 @@ footer .glyphicon {
 .background333 {
 	background-color: #333 !important;
 	color: #f6f6f6;
+}
+
+.white {
+	color: #eee;
+	box-shadow: 1px #eee;
 }
