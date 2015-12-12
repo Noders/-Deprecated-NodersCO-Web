@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Noders.co</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <!-- endbuild -->
+
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body ng-app="nodersCoWebApp" ng-controller="MainCtrl" id="noders" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#noders">Home
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#cursos">CURSOS</a></li>
+          <li><a href="#partners">PARTNERS</a></li>
+          <li><a href="#nosotros">NOSOTROS</a></li>
+          <li><a href="#eventos">EVENTOS</a></li>
+          <li><a href="#slack">S</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron text-center">
+    <img src="images/noders3-rectangle-1000-2.png" alt="" class="img-noders">
+    <h1>Noders.co</h1>
+    <p>Comunidad de Noders.co</p>
+    <!--
+    <form class="form-inline">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <br>
+      <button type="button" class="btn btn-success">Subscribe</button>
+    </form>-->
+  </div>
+
+  <!-- Container (About Section) -->
+  <div id="about" class="container-fluid">
+    <br>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-sm-8">
+        <h2>Acerca de nosotros</h2>
+        <br>
+        <h4>
+          En Noders creamos y mantenemos una comunidad global alrededor de NodeJS y su ecosistema en LatinoAmérica y el Mundo.
+          Cursos, talleres, workshops, hackatones y presentaciones!
+        </h4>
+        <br>
+        <p>
+          En Noders creamos y mantenemos una comunidad global alrededor de NodeJS y su ecosistema en LatinoAmérica y el Mundo Cursos,
+          talleres, workshops, hackatones y presentaciones!
+        </p>
+        <br>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-signal logo"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container (cursos Section) -->
+  <div id="cursos" class="container-fluid text-center">
+    <br>
+    <br>
+    <h2>Cursos</h2>
+    <h4>Nuestros cursos ofertados</h4>
+    <br>
+    <div class="row slideanim">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-off logo-small"></span>
+        <h4>Curso1</h4>
+        <p>Imformacion de Curso1</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-heart logo-small"></span>
+        <h4>Curso2</h4>
+        <p>Informacion del Curso2</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-lock logo-small"></span>
+        <h4>Curso 3</h4>
+        <p>Informacion del curso3</p>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row slideanim">
+      <br>
+      <br>
+    </div>
+  </div>
+
+  <!-- Container (partners Section) -->
+  <div id="partners" class="container-fluid text-center bg-grey">
+    <h2>partners</h2>
+    <br>
+    <h4>What we have created</h4>
+    <div class="row text-center slideanim">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="paris.jpg" alt="Paris" width="400" height="300">
+          <p><strong>Paris</strong></p>
+          <p>Yes, we built Paris</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="newyork.jpg" alt="New York" width="400" height="300">
+          <p><strong>New York</strong></p>
+          <p>We built New York</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
+          <p><strong>San Francisco</strong></p>
+          <p>Yes, San Fran is ours</p>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+
+  <!-- Container (nosotros Section) -->
+  <div id="nosotros" ng-init="GET_noders()" class="container-fluid text-center background333">
+    <h3>Nosotros</h3>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="{{index}}" ng-repeat="index in noders_list_slideIndex"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+        </div>
+        <div class="item" ng-repeat="noders in noders_list">
+          <center>
+            <img src="{{noders.img}}" alt="{{noders.username}}" class="img-circle img-noders-carousel">
+          </center>
+          <h3>{{noders.username}}</h3>
+          <p>{{noders.pais}}</p>
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Container (Pricing Section) -->
+  <!--{"name":"Que se necesita para ser un progamador en NodeJS",
+  "url":"http://www.facebook.com/noderssv",
+  "geo":{"lat":10.32424,"lng":5.84978},
+  "fechainicio":"2015-05-15T04:00:00.000Z",
+  "id":"555785a36e54538409e746e4",
+  "comunidadId":"5557bedffa0f567413db2dfe"},<{"name":"ReactJS Clase1 - 'React'"-->
+  <div id="eventos" class="container-fluid" ng-init="GET_eventos()">
+    <h1>Eventos</h1>
+    <div class="panel-group">
+      <div class="panel panel-default" ng-repeat="ev in eventos_list">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse{{ev.id}}">{{ev.name}}</a>
+          </h4>
+        </div>
+        <div id="collapse{{ev.id}}" class="panel-collapse collapse">
+          <div class="panel-body">Fecha de inicio: {{ev.fechainicio}}</div>
+          <div class="panel-footer">Panel Footer</div>
+          <center>
+          <a href="{{ev.url}}" class="btn btn-danger btn-block">Ver</a>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container (Contacto Section) 
+  <div id="contact" class="container-fluid bg-grey">
+    <h2 class="text-center">CONTACTANOS</h2>
+    <div class="row">
+      <div class="col-sm-5">
+        <p>Contact us and we'll get back to you within 24 hours.</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+        <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+      </div>
+      <div class="col-sm-7 slideanim">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
+        </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+        <br>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" type="submit">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+  <div id="googleMap" style="height:400px;width:100%;"></div>
+  <!-- Add Google Maps -->
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+  <script>
+    var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+
+function initialize() {
+var mapProp = {
+  center:myCenter,
+  zoom:12,
+  scrollwheel:false,
+  draggable:false,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+
+  <footer class="container-fluid text-center">
+    <a href="#noders" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <p>Noders.co</a></p>
+  </footer>
+
+  <script>
+    $(document).ready(
+        function(){
+          // Add smooth scrolling to all links in navbar + footer link
+          $(".navbar a, footer a[href='#noders']").on('click', function(event) {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+          // Store hash
+          var hash = this.hash;
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
+              
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+    });
+    
+      // Slide in elements on scroll
+      $(window).scroll(function() {
+        $(".slideanim").each(function(){
+          var pos = $(this).offset().top;
+    
+          var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+              $(this).addClass("slide");
+            }
+        });
+      });
+    })
+  </script>
+
+
+
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+    !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'noders.co');
+       ga('send', 'pageview');
+  </script>
+
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/about.js"></script>
+  <!-- endbuild -->
+
+</body>
+
+</html>
