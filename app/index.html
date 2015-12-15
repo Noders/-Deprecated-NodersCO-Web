@@ -1,10 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="es-ES">
 
 <head>
   <title>Noders.co</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="nodes.co" content="Comunidad noders.co, programadores Colombia" />
+  <meta name="description" content="Sitio web de tecnologia que reune a todos los desarrolladores de Colombia" />
+  <meta name="generator" content="Yeoman AngularJS" />
+  <meta name="keywords" content="desarrollo, desarrollo movil, desarrollo web, seo, web semántica, seo semántico, analytics, programacion, nodejs, javascript, html, html5, css3"/>
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
@@ -35,34 +39,67 @@
   </style>
 </head>
 
-<body ng-app="nodersCoWebApp" ng-controller="MainCtrl" id="noders" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body ng-app="nodersCoWebApp" ng-controller="MainCtrl" id="noders" data-spy="scroll" data-target=".navbar" data-offset="60"
+oncontextmenu="return false" onkeydown="return false">
   <nav class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="197">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#noders" data-toggle="tooltip" data-placement="bottom" title="Inicio">Home
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#noders" data-toggle="tooltip" data-placement="bottom" title="Inicio">Home
         </a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#cursos">CURSOS</a></li>
-          <li><a href="#partners">PARTNERS</a></li>
-          <li><a href="#nosotros">NOSOTROS</a></li>
-          <li><a href="#eventos">EVENTOS</a></li>
-          <li><a href="#slack"><img src="images/SlackRGB.png" alt="slack" width="19px" title="Ingresa a nuestro Slack"></a></li>
-        </ul>
-      </div>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#cursos">CURSOS</a></li>
+        <li><a href="#partners">PARTNERS</a></li>
+        <li><a href="#nosotros">NOSOTROS</a></li>
+        <li><a href="#eventos">EVENTOS</a></li>
+        <li>
+          <a href="#login" data-toggle="modal">
+            <span class="glyphicon glyphicon-user"></span>Login
+          </a>
+        </li>
+        <li><a href="#googleMap">></a></li>
+      </ul>
     </div>
   </nav>
 
+  <!-- Modal -->
+  <div id="login" class="modal fade" role="dialog">
+    <br>
+    <br>
+    <br>
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <h1 class="text-center login-title">Sign in</h1>
+        <div class="">
+          <!--<img style="width: 100%; height: 10%; overflow: hidden;" src="http://segmentfault.com/img/bVpQoi/view" alt="">-->
+          <form class="form-signin">
+            <input type="text" class="form-control" placeholder="Email" required autofocus>
+            <input type="password" class="form-control" placeholder="Contraseña" required>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">
+              Iniciar</button>
+            <label class="checkbox pull-left">
+              <input type="checkbox" value="remember-me"> Recordar
+            </label>
+            <a href="#" class="pull-right need-help">Necesita ayuda?</a><span class="clearfix"></span>
+          </form>
+        </div>
+        <a href="#" class="text-center new-account">Crear una cuenta </a>
+      </div>
+    </div>
+  </div>
+
 
   <div class="jumbotron text-center">
-    <img src="images/noders.png" alt="" class="img-noders">
+    <img src="http://i.imgur.com/x76fRkp.pnghttps://cloud.githubusercontent.com/assets/1206865/8812203/1b664b00-2fd1-11e5-8c72-e3bd00b18234.png"
+    alt="" class="img-noders">
+    <!--<img src="images/noders.png" alt="" class="img-noders">-->
     <h1>Noders.co</h1>
     <p>Comunidad de Noders.co</p>
     <!--
@@ -294,8 +331,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <a href="#noders" title="To Top">
       <span class="glyphicon glyphicon-chevron-up"></span>
     </a>
-    <p>Noders.co</a>
-    </p>
+    <p>Noders.co</p>
   </footer>
 
   <script>

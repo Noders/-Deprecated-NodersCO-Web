@@ -22,7 +22,7 @@ angular.module('nodersCoWebApp')
       $scope.noders_list_slideIndex = [];
       var i = 1;
       $http.get(url_API + 'Noders').success(function (data) {
-        console.log("Mensaje: " + data);
+        //console.log("Mensaje: " + data);
         data.forEach(function (element) {
           $scope.noders_list.push(element);
           $scope.noders_list_slideIndex.push(i++);
